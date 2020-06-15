@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe  -link  -top  gMUXBypass  -multisrs  "D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\synwork\gMUXBypass_impl1_comp.srs"  -osyn  "D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\synwork\gMUXBypass_impl1_mult.srs"  -log  "D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\synlog\gMUXBypass_impl1_multi_srs_gen.srr" 
+relcom:C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe -link -top gMUXBypass -multisrs "D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\synwork\gMUXBypass_impl1_comp.srs" -osyn "D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\synwork\gMUXBypass_impl1_mult.srs" -log "D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\synlog\gMUXBypass_impl1_multi_srs_gen.srr"
+rc:0 success:1 runtime:0
+file:..\synwork\gMUXBypass_impl1_comp.srs|io:i|time:1592188807|size:2448|exec:0|csum:C83458F7D78AF59CD923B86FA60DA929
+file:..\synwork\gMUXBypass_impl1_mult.srs|io:o|time:1592188809|size:2222|exec:0|csum:
+file:..\synlog\gMUXBypass_impl1_multi_srs_gen.srr|io:o|time:1592188809|size:1143|exec:0|csum:
+file:C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe|io:i|time:1554074552|size:8734720|exec:1|csum:0A206A5298321BBDD627E7975EAE3EC2

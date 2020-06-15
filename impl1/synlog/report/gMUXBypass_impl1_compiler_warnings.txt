@@ -1,0 +1,3 @@
+@W: CG360 :"D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\source\gMUXBypass.v":27:8:27:19|Removing wire LCD_BKLT_PWM, as there is no assignment to it.
+@W: CL318 :"D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\source\gMUXBypass.v":27:8:27:19|*Output LCD_BKLT_PWM has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+

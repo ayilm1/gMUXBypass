@@ -1,0 +1,16 @@
+----------------------------------------------------------------------
+Report for cell gMUXBypass.verilog
+
+Register bits: 0 of 4752 (0%)
+PIC Latch:       0
+I/O cells:       27
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                GSR        1       100.0
+                                 IB        9       100.0
+                                 OB       18       100.0
+                                PUR        1       100.0
+                                VHI        1       100.0
+                                VLO        1       100.0
+                            
+                         TOTAL            31           

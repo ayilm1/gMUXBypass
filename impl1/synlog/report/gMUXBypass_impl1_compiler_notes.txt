@@ -1,0 +1,5 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\source\gMUXBypass.v":1:7:1:16|Synthesizing module gMUXBypass in library work.
+@N|Running in 64-bit mode
+

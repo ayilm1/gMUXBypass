@@ -1,0 +1,4 @@
+
+-g RamCfg:Reset
+-g DisableUES:FALSE
+-g TAG_MEMORY:Normal

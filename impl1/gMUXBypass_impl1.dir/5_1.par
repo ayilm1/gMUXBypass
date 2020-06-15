@@ -1,0 +1,208 @@
+
+Lattice Place and Route Report for Design "gMUXBypass_impl1_map.ncd"
+Mon Jun 15 12:40:19 2020
+
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF gMUXBypass_impl1_map.ncd gMUXBypass_impl1.dir/5_1.ncd gMUXBypass_impl1.prf
+Preference file: gMUXBypass_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file gMUXBypass_impl1_map.ncd.
+Design name: gMUXBypass
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     CSBGA132
+Performance: 5
+Loading device for application par from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      42/174          24% used
+                     42/86           48% bonded
+   SLICE              1/2376         <1% used
+
+
+
+Number of Signals: 10
+Number of Connections: 16
+
+Pin Constraint Summary:
+   27 out of 27 pins locked (100% locked).
+
+No signal is selected as primary clock.
+
+No signal is selected as DCS clock.
+
+No signal is selected as secondary clock.
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 2 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 10028.
+Finished Placer Phase 1.  REAL time: 4 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  10028
+Finished Placer Phase 2.  REAL time: 4 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  PLL        : 0 out of 2 (0%)
+  CLKDIV     : 0 out of 2 (0%)
+
+Global Clocks:
+
+  PRIMARY  : 0 out of 8 (0%)
+     DCS   : 0 out of 2 (0%)
+  SECONDARY: 0 out of 4 (0%)
+
+Edge Clocks:
+  No edge clock selected
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   42 out of 174 (24.1%) PIO sites used.
+   42 out of 86 (48.8%) bonded PIO sites used.
+   Number of PIO comps: 27; differential: 15.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 16 / 18 ( 88%) | 1.8V       | -          | -          |
+| 1        | 0 / 4 (  0%)   | -          | -          | -          |
+| 2        | 0 / 16 (  0%)  | -          | -          | -          |
+| 3        | 2 / 4 ( 50%)   | -          | -          | -          |
+| 4        | 0 / 8 (  0%)   | -          | -          | -          |
+| 5        | 10 / 14 ( 71%) | 3.3V       | -          | -          |
+| 6        | 0 / 6 (  0%)   | -          | -          | -          |
+| 7        | 14 / 16 ( 87%) | -          | -          | -          |
++----------+----------------+------------+------------+------------+
+
+
+DSP Utilization Summary:
+-------------------------------------
+DSP Block #:              1 2 3
+# of MULT36X36B                
+# of MULT18X18B                
+# of MULT18X18MACB             
+# of MULT18X18ADDSUBB          
+# of MULT18X18ADDSUBSUMB       
+# of MULT9X9B                  
+# of MULT9X9ADDSUBB            
+# of MULT9X9ADDSUBSUMB         
+
+Total placer CPU time: 3 secs 
+
+Dumping design to file gMUXBypass_impl1.dir/5_1.ncd.
+
+
+-----------------------------------------------------------------
+INFO - par: ASE feature is off due to non timing-driven settings.  
+-----------------------------------------------------------------
+
+0 connections routed; 16 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 5 secs 
+
+Start NBR router at 12:40:24 06/15/20
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 12:40:24 06/15/20
+
+Start NBR section for initial routing at 12:40:24 06/15/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 12:40:24 06/15/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+
+Start NBR section for re-routing at 12:40:24 06/15/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+
+Start NBR section for post-routing at 12:40:24 06/15/20
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : <n/a>
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 4 secs 
+Total REAL time: 5 secs 
+Completely routed.
+End of route.  16 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file gMUXBypass_impl1.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 5 secs 
+Total REAL time to completion: 7 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.

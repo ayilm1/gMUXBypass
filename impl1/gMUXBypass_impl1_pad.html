@@ -1,0 +1,374 @@
+<HTML>
+<HEAD><TITLE>PAD Specification File</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Pad"></A>PAD Specification File
+***************************
+
+PART TYPE:        LFXP2-5E
+Performance Grade:      5
+PACKAGE:          CSBGA132
+Package Status:                     Final          Version 1.42
+
+Mon Jun 15 12:40:23 2020
+
+Pinout by Port Name:
++-------------------+----------+----------------+-------+-------------------------------+
+| Port Name         | Pin/Bank | Buffer Type    | Site  | Properties                    |
++-------------------+----------+----------------+-------+-------------------------------+
+| EG_RESET_L        | P5/5     | LVCMOS33_OUT   | PB16A | DRIVE:12mA SLEW:FAST PULL:UP  |
+| GPUVCORE_EN       | P6/5     | LVCMOS33_OUT   | PB17A | DRIVE:12mA SLEW:FAST PULL:UP  |
+| LCD_BKLT_EN       | P2/5     | LVCMOS33_OUT   | PB7A  | DRIVE:12mA SLEW:FAST PULL:UP  |
+| LCD_BKLT_PWM      | N2/5     | LVCMOS33_OUT   | PB7B  | DRIVE:12mA SLEW:FAST          |
+| LCD_PWR_EN        | N8/5     | LVCMOS33_OUT   | PB19B | DRIVE:12mA SLEW:FAST PULL:UP  |
+| LVDS_A_CLK        | A6/0     | SSTL18D_II_OUT | PT15A | DRIVE:12mA SLEW:FAST          |
+| LVDS_A_DATA[0]    | A8/0     | SSTL18D_II_OUT | PT17A | DRIVE:12mA SLEW:FAST          |
+| LVDS_A_DATA[1]    | A9/0     | SSTL18D_II_OUT | PT18A | DRIVE:12mA SLEW:FAST          |
+| LVDS_A_DATA[2]    | B10/0    | SSTL18D_II_OUT | PT19A | DRIVE:12mA SLEW:FAST          |
+| LVDS_B_CLK        | C8/0     | SSTL18D_II_OUT | PT16A | DRIVE:12mA SLEW:FAST          |
+| LVDS_B_DATA[0]    | A2/0     | SSTL18D_II_OUT | PT7A  | DRIVE:12mA SLEW:FAST          |
+| LVDS_B_DATA[1]    | A1/0     | SSTL18D_II_OUT | PT8A  | DRIVE:12mA SLEW:FAST          |
+| LVDS_B_DATA[2]    | C5/0     | SSTL18D_II_OUT | PT9A  | DRIVE:12mA SLEW:FAST          |
+| LVDS_DDC_SEL_EG   | P4/5     | LVCMOS33_OUT   | PB14A | DRIVE:12mA SLEW:FAST PULL:UP  |
+| LVDS_DDC_SEL_IG   | N4/5     | LVCMOS33_OUT   | PB14B | DRIVE:12mA SLEW:FAST PULL:UP  |
+| LVDS_IG_A_CLK     | H1/7     | SSTL18D_II_IN  | PL12A | SLEW:FAST                     |
+| LVDS_IG_A_DATA[0] | D1/7     | SSTL18D_II_IN  | PL7A  | SLEW:FAST                     |
+| LVDS_IG_A_DATA[1] | D2/7     | SSTL18D_II_IN  | PL8A  | SLEW:FAST                     |
+| LVDS_IG_A_DATA[2] | F1/7     | SSTL18D_II_IN  | PL9A  | SLEW:FAST                     |
+| LVDS_IG_BKL_ON    | N14/3    | LVCMOS33_IN    | PR24A | SLEW:FAST PULL:DOWN           |
+| LVDS_IG_B_DATA[0] | F3/7     | SSTL18D_II_IN  | PL10A | SLEW:FAST                     |
+| LVDS_IG_B_DATA[1] | H2/7     | SSTL18D_II_IN  | PL11A | SLEW:FAST                     |
+| LVDS_IG_B_DATA[2] | B1/7     | SSTL18D_II_IN  | PL2A  | SLEW:FAST                     |
+| LVDS_IG_PANEL_PWR | L14/3    | LVCMOS33_IN    | PR14A | SLEW:FAST PULL:DOWN           |
+| P1V0GPU_EN        | M6/5     | LVCMOS33_OUT   | PB17B | DRIVE:12mA SLEW:FAST PULL:UP  |
+| P1V5FB1V8GPU_R_EN | P7/5     | LVCMOS33_OUT   | PB18A | DRIVE:12mA SLEW:FAST PULL:UP  |
+| P3V3GPU_EN        | M5/5     | LVCMOS33_OUT   | PB16B | DRIVE:12mA SLEW:FAST PULL:UP  |
++-------------------+----------+----------------+-------+-------------------------------+
+
+Vccio by Bank:
++------+-------+
+| Bank | Vccio |
++------+-------+
+| 0    | 1.8V  |
+| 3    |       |
+| 5    | 3.3V  |
+| 7    |       |
++------+-------+
+
+
+<A name="pad_vref"></A><B><U><big>Vref by Bank:</big></U></B>
++------+-----+-----------------+---------+
+| Vref | Pin | Bank # / Vref # | Load(s) |
++------+-----+-----------------+---------+
++------+-----+-----------------+---------+
+
+<A name="pad_pin"></A><B><U><big>Pinout by Pin Number:</big></U></B>
++----------+---------------------+------------+----------------+-------+----------------------+
+| Pin/Bank | Pin Info            | Preference | Buffer Type    | Site  | Dual Function        |
++----------+---------------------+------------+----------------+-------+----------------------+
+| A1/0     | LVDS_B_DATA[1]+     | LOCATED    | SSTL18D_II_OUT | PT8A  | ULC_GPLLT_IN_A       |
+| A2/0     | LVDS_B_DATA[0]+     | LOCATED    | SSTL18D_II_OUT | PT7A  | VREF1_0              |
+| A3/0     | LVDS_B_DATA[0]-     |            | SSTL18D_II_OUT | PT7B  | VREF2_0              |
+| A5/0     | LVDS_B_DATA[2]-     |            | SSTL18D_II_OUT | PT9B  | ULC_GPLLC_FB_A       |
+| A6/0     | LVDS_A_CLK+         | LOCATED    | SSTL18D_II_OUT | PT15A | TDQS15               |
+| A7/0     | LVDS_A_CLK-         |            | SSTL18D_II_OUT | PT15B | TDQ15                |
+| A8/0     | LVDS_A_DATA[0]+     | LOCATED    | SSTL18D_II_OUT | PT17A | TDQ15                |
+| A9/0     | LVDS_A_DATA[1]+     | LOCATED    | SSTL18D_II_OUT | PT18A | TDQ15                |
+| A10/0    | LVDS_A_DATA[2]-     |            | SSTL18D_II_OUT | PT19B | PCLKC0_0/TDQ15       |
+| A11/1    |     unused, PULL:UP |            |                | PT20A | PCLKT1_0/TDQ24       |
+| A13/1    |     unused, PULL:UP |            |                | PT28B | VREF2_1/TDQ24        |
+| A14/2    |     unused, PULL:UP |            |                | PR2A  | VREF1_2              |
+| B1/7     | LVDS_IG_B_DATA[2]+  | LOCATED    | SSTL18D_II_IN  | PL2A  | VREF1_7              |
+| B2/7     | LVDS_IG_B_DATA[2]-  |            | SSTL18D_II_IN  | PL2B  | VREF2_7              |
+| B3/0     | LVDS_B_DATA[1]-     |            | SSTL18D_II_OUT | PT8B  | ULC_GPLLC_IN_A       |
+| B6/0     |     unused, PULL:UP |            |                | PT14A | TDQ15                |
+| B9/0     | LVDS_A_DATA[0]-     |            | SSTL18D_II_OUT | PT17B | TDQ15                |
+| B10/0    | LVDS_A_DATA[2]+     | LOCATED    | SSTL18D_II_OUT | PT19A | PCLKT0_0/TDQ15       |
+| B12/1    |     unused, PULL:UP |            |                | PT20B | PCLKC1_0/TDQ24       |
+| B13/1    |     unused, PULL:UP |            |                | PT28A | VREF1_1/TDQ24        |
+| B14/2    |     unused, PULL:UP |            |                | PR2B  | VREF2_2              |
+| C2/7     |     unused, PULL:UP |            |                | PL6A  | PROGRAMN/LDQ9        |
+| C5/0     | LVDS_B_DATA[2]+     | LOCATED    | SSTL18D_II_OUT | PT9A  | ULC_GPLLT_FB_A       |
+| C7/0     |     unused, PULL:UP |            |                | PT14B | TDQ15                |
+| C8/0     | LVDS_B_CLK+         | LOCATED    | SSTL18D_II_OUT | PT16A | TDQ15                |
+| C9/0     | LVDS_B_CLK-         |            | SSTL18D_II_OUT | PT16B | TDQ15                |
+| C10/0    | LVDS_A_DATA[1]-     |            | SSTL18D_II_OUT | PT18B | TDQ15                |
+| D1/7     | LVDS_IG_A_DATA[0]+  | LOCATED    | SSTL18D_II_IN  | PL7A  | CFG1/LDQ9            |
+| D2/7     | LVDS_IG_A_DATA[1]+  | LOCATED    | SSTL18D_II_IN  | PL8A  | CSSPISN/LDQ9         |
+| D3/7     |     unused, PULL:UP |            |                | PL6B  | DONE/LDQ9            |
+| D12/2    |     unused, PULL:UP |            |                | PR6A  | RDQ9                 |
+| D13/2    |     unused, PULL:UP |            |                | PR6B  | RDQ9                 |
+| D14/2    |     unused, PULL:UP |            |                | PR7A  | RDQ9                 |
+| E1/7     | LVDS_IG_A_DATA[0]-  |            | SSTL18D_II_IN  | PL7B  | LDQ9                 |
+| E3/7     | LVDS_IG_A_DATA[1]-  |            | SSTL18D_II_IN  | PL8B  | CSSPIN/LDQ9          |
+| E12/2    |     unused, PULL:UP |            |                | PR8A  | RDQ9                 |
+| E14/2    |     unused, PULL:UP |            |                | PR7B  | RDQ9                 |
+| F1/7     | LVDS_IG_A_DATA[2]+  | LOCATED    | SSTL18D_II_IN  | PL9A  | LDQS9                |
+| F3/7     | LVDS_IG_B_DATA[0]+  | LOCATED    | SSTL18D_II_IN  | PL10A | CCLK/LDQ9            |
+| F12/2    |     unused, PULL:UP |            |                | PR8B  | RDQ9                 |
+| F14/2    |     unused, PULL:UP |            |                | PR9A  | RDQS9                |
+| G1/7     | LVDS_IG_A_DATA[2]-  |            | SSTL18D_II_IN  | PL9B  | LDQ9                 |
+| G2/7     | LVDS_IG_B_DATA[0]-  |            | SSTL18D_II_IN  | PL10B | SO/LDQ9              |
+| G3/7     | LVDS_IG_B_DATA[1]-  |            | SSTL18D_II_IN  | PL11B | INITN/LDQ9           |
+| G12/2    |     unused, PULL:UP |            |                | PR10A | FL_EXT_PULSE_G/RDQ9  |
+| G13/2    |     unused, PULL:UP |            |                | PR10B | FL_EXT_PULSE_D/RDQ9  |
+| G14/2    |     unused, PULL:UP |            |                | PR9B  | RDQ9                 |
+| H1/7     | LVDS_IG_A_CLK+      | LOCATED    | SSTL18D_II_IN  | PL12A | PCLKT7_0/LDQ9        |
+| H2/7     | LVDS_IG_B_DATA[1]+  | LOCATED    | SSTL18D_II_IN  | PL11A | SI/LDQ9              |
+| H3/7     | LVDS_IG_A_CLK-      |            | SSTL18D_II_IN  | PL12B | PCLKC7_0/LDQ9        |
+| H12/2    |     unused, PULL:UP |            |                | PR11B | RDQ9                 |
+| H13/2    |     unused, PULL:UP |            |                | PR11A | MFG_EXT_CLK/RDQ9     |
+| H14/2    |     unused, PULL:UP |            |                | PR12A | PCLKT2_0/RDQ9        |
+| J12/2    |     unused, PULL:UP |            |                | PR12B | PCLKC2_0/RDQ9        |
+| K3/6     |     unused, PULL:UP |            |                | PL15A | LDQ18                |
+| L1/6     |     unused, PULL:UP |            |                | PL14A | PCLKT6_0/LDQ18       |
+| L2/6     |     unused, PULL:UP |            |                | PL15B | LDQ18                |
+| L3/6     |     unused, PULL:UP |            |                | PL14B | PCLKC6_0/LDQ18       |
+| L14/3    | LVDS_IG_PANEL_PWR   | LOCATED    | LVCMOS33_IN    | PR14A | PCLKT3_0/RDQ18       |
+| M4/5     |     unused, PULL:UP |            |                | PB15B | BDQ15                |
+| M5/5     | P3V3GPU_EN          | LOCATED    | LVCMOS33_OUT   | PB16B | BDQ15                |
+| M6/5     | P1V0GPU_EN          | LOCATED    | LVCMOS33_OUT   | PB17B | BDQ15                |
+| M7/5     |     unused, PULL:UP |            |                | PB18B | BDQ15                |
+| M10/4    |     unused, PULL:UP |            |                | PB26B | LRC_GPLLC_IN_A/BDQ24 |
+| M13/3    |     unused, PULL:UP |            |                | PR14B | PCLKC3_0/RDQ18       |
+| N1/6     |     unused, PULL:UP |            |                | PL25A | VREF1_6              |
+| N2/5     | LCD_BKLT_PWM        | LOCATED    | LVCMOS33_OUT   | PB7B  | VREF2_5              |
+| N3/5     |     unused, PULL:UP |            |                | PB15A | BDQS15               |
+| N4/5     | LVDS_DDC_SEL_IG     | LOCATED    | LVCMOS33_OUT   | PB14B | BDQ15                |
+| N7/5     |     unused, PULL:UP |            |                | PB19A | PCLKT5_0/BDQ15       |
+| N8/5     | LCD_PWR_EN          | LOCATED    | LVCMOS33_OUT   | PB19B | PCLKC5_0/BDQ15       |
+| N9/4     |     unused, PULL:UP |            |                | PB20B | PCLKC4_0/BDQ24       |
+| N12/4    |     unused, PULL:UP |            |                | PB28A | VREF1_4/BDQ24        |
+| N13/3    |     unused, PULL:UP |            |                | PR24B | VREF2_3              |
+| N14/3    | LVDS_IG_BKL_ON      | LOCATED    | LVCMOS33_IN    | PR24A | VREF1_3              |
+| P1/6     |     unused, PULL:UP |            |                | PL25B | VREF2_6              |
+| P2/5     | LCD_BKLT_EN         | LOCATED    | LVCMOS33_OUT   | PB7A  | VREF1_5              |
+| P4/5     | LVDS_DDC_SEL_EG     | LOCATED    | LVCMOS33_OUT   | PB14A | BDQ15                |
+| P5/5     | EG_RESET_L          | LOCATED    | LVCMOS33_OUT   | PB16A | BDQ15                |
+| P6/5     | GPUVCORE_EN         | LOCATED    | LVCMOS33_OUT   | PB17A | BDQ15                |
+| P7/5     | P1V5FB1V8GPU_R_EN   | LOCATED    | LVCMOS33_OUT   | PB18A | BDQ15                |
+| P9/4     |     unused, PULL:UP |            |                | PB20A | PCLKT4_0/BDQ24       |
+| P10/4    |     unused, PULL:UP |            |                | PB26A | LRC_GPLLT_IN_A/BDQ24 |
+| P12/4    |     unused, PULL:UP |            |                | PB27A | LRC_GPLLT_FB_A/BDQ24 |
+| P13/4    |     unused, PULL:UP |            |                | PB27B | LRC_GPLLC_FB_A/BDQ24 |
+| P14/4    |     unused, PULL:UP |            |                | PB28B | VREF2_4/BDQ24        |
+| PB2A/0   |     unused, PULL:UP |            |                | PB2A  |                      |
+| PB2B/0   |     unused, PULL:UP |            |                | PB2B  |                      |
+| PB3A/0   |     unused, PULL:UP |            |                | PB3A  |                      |
+| PB3B/0   |     unused, PULL:UP |            |                | PB3B  |                      |
+| PB4A/0   |     unused, PULL:UP |            |                | PB4A  |                      |
+| PB4B/0   |     unused, PULL:UP |            |                | PB4B  |                      |
+| PB5A/0   |     unused, PULL:UP |            |                | PB5A  |                      |
+| PB5B/0   |     unused, PULL:UP |            |                | PB5B  |                      |
+| PB6A/0   |     unused, PULL:UP |            |                | PB6A  |                      |
+| PB6B/0   |     unused, PULL:UP |            |                | PB6B  |                      |
+| PB8A/5   |     unused, PULL:UP |            |                | PB8A  |                      |
+| PB8B/5   |     unused, PULL:UP |            |                | PB8B  |                      |
+| PB9A/5   |     unused, PULL:UP |            |                | PB9A  |                      |
+| PB9B/5   |     unused, PULL:UP |            |                | PB9B  |                      |
+| PB10A/5  |     unused, PULL:UP |            |                | PB10A |                      |
+| PB10B/5  |     unused, PULL:UP |            |                | PB10B |                      |
+| PB11A/5  |     unused, PULL:UP |            |                | PB11A | BDQ15                |
+| PB11B/5  |     unused, PULL:UP |            |                | PB11B | BDQ15                |
+| PB12A/5  |     unused, PULL:UP |            |                | PB12A | BDQ15                |
+| PB12B/5  |     unused, PULL:UP |            |                | PB12B | BDQ15                |
+| PB13A/5  |     unused, PULL:UP |            |                | PB13A | BDQ15                |
+| PB13B/5  |     unused, PULL:UP |            |                | PB13B | BDQ15                |
+| PB21A/4  |     unused, PULL:UP |            |                | PB21A | BDQ24                |
+| PB21B/4  |     unused, PULL:UP |            |                | PB21B | BDQ24                |
+| PB22A/4  |     unused, PULL:UP |            |                | PB22A | BDQ24                |
+| PB22B/4  |     unused, PULL:UP |            |                | PB22B | BDQ24                |
+| PB23A/4  |     unused, PULL:UP |            |                | PB23A | BDQ24                |
+| PB23B/4  |     unused, PULL:UP |            |                | PB23B | BDQ24                |
+| PB24A/4  |     unused, PULL:UP |            |                | PB24A | BDQS24               |
+| PB24B/4  |     unused, PULL:UP |            |                | PB24B | BDQ24                |
+| PB25A/4  |     unused, PULL:UP |            |                | PB25A | BDQ24                |
+| PB25B/4  |     unused, PULL:UP |            |                | PB25B | BDQ24                |
+| PL3A/7   |     unused, PULL:UP |            |                | PL3A  |                      |
+| PL3B/7   |     unused, PULL:UP |            |                | PL3B  |                      |
+| PL4A/7   |     unused, PULL:UP |            |                | PL4A  |                      |
+| PL4B/7   |     unused, PULL:UP |            |                | PL4B  |                      |
+| PL5A/7   |     unused, PULL:UP |            |                | PL5A  | LDQ9                 |
+| PL5B/7   |     unused, PULL:UP |            |                | PL5B  | LDQ9                 |
+| PL16A/6  |     unused, PULL:UP |            |                | PL16A | LDQ18                |
+| PL16B/6  |     unused, PULL:UP |            |                | PL16B | LDQ18                |
+| PL17A/6  |     unused, PULL:UP |            |                | PL17A | LDQ18                |
+| PL17B/6  |     unused, PULL:UP |            |                | PL17B | LDQ18                |
+| PL18A/6  |     unused, PULL:UP |            |                | PL18A | LDQS18               |
+| PL18B/6  |     unused, PULL:UP |            |                | PL18B | LDQ18                |
+| PL19A/6  |     unused, PULL:UP |            |                | PL19A | LDQ18                |
+| PL19B/6  |     unused, PULL:UP |            |                | PL19B | LDQ18                |
+| PL20A/6  |     unused, PULL:UP |            |                | PL20A | LDQ18                |
+| PL20B/6  |     unused, PULL:UP |            |                | PL20B | LDQ18                |
+| PL21A/6  |     unused, PULL:UP |            |                | PL21A | LDQ18                |
+| PL21B/6  |     unused, PULL:UP |            |                | PL21B | LDQ18                |
+| PL23A/6  |     unused, PULL:UP |            |                | PL23A |                      |
+| PL23B/6  |     unused, PULL:UP |            |                | PL23B |                      |
+| PL24A/6  |     unused, PULL:UP |            |                | PL24A |                      |
+| PL24B/6  |     unused, PULL:UP |            |                | PL24B |                      |
+| PR3A/2   |     unused, PULL:UP |            |                | PR3A  |                      |
+| PR3B/2   |     unused, PULL:UP |            |                | PR3B  |                      |
+| PR4A/2   |     unused, PULL:UP |            |                | PR4A  |                      |
+| PR4B/2   |     unused, PULL:UP |            |                | PR4B  |                      |
+| PR5A/2   |     unused, PULL:UP |            |                | PR5A  | RDQ9                 |
+| PR5B/2   |     unused, PULL:UP |            |                | PR5B  | RDQ9                 |
+| PR15A/3  |     unused, PULL:UP |            |                | PR15A | RDQ18                |
+| PR15B/3  |     unused, PULL:UP |            |                | PR15B | RDQ18                |
+| PR16A/3  |     unused, PULL:UP |            |                | PR16A | RDQ18                |
+| PR16B/3  |     unused, PULL:UP |            |                | PR16B | RDQ18                |
+| PR17A/3  |     unused, PULL:UP |            |                | PR17A | RDQ18                |
+| PR17B/3  |     unused, PULL:UP |            |                | PR17B | RDQ18                |
+| PR18A/3  |     unused, PULL:UP |            |                | PR18A | RDQS18               |
+| PR18B/3  |     unused, PULL:UP |            |                | PR18B | RDQ18                |
+| PR19A/3  |     unused, PULL:UP |            |                | PR19A | RDQ18                |
+| PR19B/3  |     unused, PULL:UP |            |                | PR19B | RDQ18                |
+| PR20A/3  |     unused, PULL:UP |            |                | PR20A | RDQ18                |
+| PR20B/3  |     unused, PULL:UP |            |                | PR20B | RDQ18                |
+| PR21A/3  |     unused, PULL:UP |            |                | PR21A | RDQ18                |
+| PR21B/3  |     unused, PULL:UP |            |                | PR21B | RDQ18                |
+| PR23A/3  |     unused, PULL:UP |            |                | PR23A |                      |
+| PR23B/3  |     unused, PULL:UP |            |                | PR23B |                      |
+| PR25A/0  |     unused, PULL:UP |            |                | PR25A |                      |
+| PR25B/0  |     unused, PULL:UP |            |                | PR25B |                      |
+| PT2A/0   |     unused, PULL:UP |            |                | PT2A  |                      |
+| PT2B/0   |     unused, PULL:UP |            |                | PT2B  |                      |
+| PT3A/0   |     unused, PULL:UP |            |                | PT3A  |                      |
+| PT3B/0   |     unused, PULL:UP |            |                | PT3B  |                      |
+| PT4A/0   |     unused, PULL:UP |            |                | PT4A  |                      |
+| PT4B/0   |     unused, PULL:UP |            |                | PT4B  |                      |
+| PT5A/0   |     unused, PULL:UP |            |                | PT5A  |                      |
+| PT5B/0   |     unused, PULL:UP |            |                | PT5B  |                      |
+| PT6A/0   |     unused, PULL:UP |            |                | PT6A  |                      |
+| PT6B/0   |     unused, PULL:UP |            |                | PT6B  |                      |
+| PT10A/0  |     unused, PULL:UP |            |                | PT10A |                      |
+| PT10B/0  |     unused, PULL:UP |            |                | PT10B |                      |
+| PT11A/0  |     unused, PULL:UP |            |                | PT11A | TDQ15                |
+| PT11B/0  |     unused, PULL:UP |            |                | PT11B | TDQ15                |
+| PT12A/0  |     unused, PULL:UP |            |                | PT12A | TDQ15                |
+| PT12B/0  |     unused, PULL:UP |            |                | PT12B | TDQ15                |
+| PT13A/0  |     unused, PULL:UP |            |                | PT13A | TDQ15                |
+| PT13B/0  |     unused, PULL:UP |            |                | PT13B | TDQ15                |
+| PT21A/1  |     unused, PULL:UP |            |                | PT21A | TDQ24                |
+| PT21B/1  |     unused, PULL:UP |            |                | PT21B | TDQ24                |
+| PT22A/1  |     unused, PULL:UP |            |                | PT22A | TDQ24                |
+| PT22B/1  |     unused, PULL:UP |            |                | PT22B | TDQ24                |
+| PT23A/1  |     unused, PULL:UP |            |                | PT23A | TDQ24                |
+| PT23B/1  |     unused, PULL:UP |            |                | PT23B | TDQ24                |
+| PT24A/1  |     unused, PULL:UP |            |                | PT24A | TDQS24               |
+| PT24B/1  |     unused, PULL:UP |            |                | PT24B | TDQ24                |
+| PT25A/1  |     unused, PULL:UP |            |                | PT25A | TDQ24                |
+| PT25B/1  |     unused, PULL:UP |            |                | PT25B | TDQ24                |
+| PT26A/1  |     unused, PULL:UP |            |                | PT26A | TDQ24                |
+| PT26B/1  |     unused, PULL:UP |            |                | PT26B | TDQ24                |
+| PT27A/1  |     unused, PULL:UP |            |                | PT27A | TDQ24                |
+| PT27B/1  |     unused, PULL:UP |            |                | PT27B | TDQ24                |
+| TCK/8    |                     |            |                | TCK   |                      |
+| TDI/8    |                     |            |                | TDI   |                      |
+| TDO/8    |                     |            |                | TDO   |                      |
+| TMS/8    |                     |            |                | TMS   |                      |
++----------+---------------------+------------+----------------+-------+----------------------+
+
+
+List of All Pins' Locate Preferences Based on Final Placement After PAR 
+to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
+
+LOCATE  COMP  "EG_RESET_L"  SITE  "P5";
+LOCATE  COMP  "GPUVCORE_EN"  SITE  "P6";
+LOCATE  COMP  "LCD_BKLT_EN"  SITE  "P2";
+LOCATE  COMP  "LCD_BKLT_PWM"  SITE  "N2";
+LOCATE  COMP  "LCD_PWR_EN"  SITE  "N8";
+LOCATE  COMP  "LVDS_A_CLK"  SITE  "A6";
+LOCATE  COMP  "LVDS_A_DATA[0]"  SITE  "A8";
+LOCATE  COMP  "LVDS_A_DATA[1]"  SITE  "A9";
+LOCATE  COMP  "LVDS_A_DATA[2]"  SITE  "B10";
+LOCATE  COMP  "LVDS_B_CLK"  SITE  "C8";
+LOCATE  COMP  "LVDS_B_DATA[0]"  SITE  "A2";
+LOCATE  COMP  "LVDS_B_DATA[1]"  SITE  "A1";
+LOCATE  COMP  "LVDS_B_DATA[2]"  SITE  "C5";
+LOCATE  COMP  "LVDS_DDC_SEL_EG"  SITE  "P4";
+LOCATE  COMP  "LVDS_DDC_SEL_IG"  SITE  "N4";
+LOCATE  COMP  "LVDS_IG_A_CLK"  SITE  "H1";
+LOCATE  COMP  "LVDS_IG_A_DATA[0]"  SITE  "D1";
+LOCATE  COMP  "LVDS_IG_A_DATA[1]"  SITE  "D2";
+LOCATE  COMP  "LVDS_IG_A_DATA[2]"  SITE  "F1";
+LOCATE  COMP  "LVDS_IG_BKL_ON"  SITE  "N14";
+LOCATE  COMP  "LVDS_IG_B_DATA[0]"  SITE  "F3";
+LOCATE  COMP  "LVDS_IG_B_DATA[1]"  SITE  "H2";
+LOCATE  COMP  "LVDS_IG_B_DATA[2]"  SITE  "B1";
+LOCATE  COMP  "LVDS_IG_PANEL_PWR"  SITE  "L14";
+LOCATE  COMP  "P1V0GPU_EN"  SITE  "M6";
+LOCATE  COMP  "P1V5FB1V8GPU_R_EN"  SITE  "P7";
+LOCATE  COMP  "P3V3GPU_EN"  SITE  "M5";
+
+
+
+
+
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jun 15 12:40:23 2020
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

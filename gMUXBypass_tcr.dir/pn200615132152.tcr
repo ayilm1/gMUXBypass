@@ -1,0 +1,39 @@
+#Start recording tcl command: 6/15/2020 00:22:16
+#Project Location: D:/Dropbox (Personal)/Projects/gMUX Bypass; Project name: gMUXBypass
+prj_project new -name "gMUXBypass" -impl "impl1" -dev LFXP2-5E-5M132C -synthesis "synplify"
+prj_project save
+file copy -force -- "D:/Dropbox (Personal)/Projects/gMUX Bypass/src/gMUXBypass.v" "D:/Dropbox (Personal)/Projects/gMUX Bypass/impl1/source"
+prj_src add "D:/Dropbox (Personal)/Projects/gMUX Bypass/impl1/source/gMUXBypass.v"
+prj_run Export -impl impl1 -task Bitgen
+source "D:/Dropbox (Personal)/Projects/gMUX Bypass/hdle_generate_Symbol.tcl"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Synthesis -impl impl1 -task Synplify_Synthesis
+prj_run PAR -impl impl1 -task PARTrace
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+pgr_project save "D:/Dropbox (Personal)/Projects/gMUX Bypass/impl1/impl1.xcf"
+prj_src add -exclude "D:/Dropbox (Personal)/Projects/gMUX Bypass/impl1/impl1.xcf"
+prj_src enable "D:/Dropbox (Personal)/Projects/gMUX Bypass/impl1/impl1.xcf"
+pgr_program run
+pgr_program run
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Translate -impl impl1
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+pgr_project save "D:/Dropbox (Personal)/Projects/gMUX Bypass/impl1/impl1.xcf"
+pgr_project close
+prj_run Export -impl impl1 -task Bitgen
+prj_project save
+#Stop recording: 6/15/2020 13:21:52

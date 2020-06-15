@@ -1,0 +1,9 @@
+Selecting top level module gMUXBypass
+@N: CG364 :"D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\source\gMUXBypass.v":1:7:1:16|Synthesizing module gMUXBypass in library work.
+Running optimization stage 1 on gMUXBypass .......
+Running optimization stage 2 on gMUXBypass .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: D:\Dropbox (Personal)\Projects\gMUX Bypass\impl1\synwork\layer0.rt.csv
+

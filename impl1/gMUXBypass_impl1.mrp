@@ -1,0 +1,204 @@
+
+          Lattice Mapping Report File for Design Module 'gMUXBypass'
+
+
+Design Information
+------------------
+
+Command line:   map -a LatticeXP2 -p LFXP2-5E -t CSBGA132 -s 5 -oc Commercial
+     gMUXBypass_impl1.ngd -o gMUXBypass_impl1_map.ncd -pr gMUXBypass_impl1.prf
+     -mp gMUXBypass_impl1.mrp -lpf D:/Dropbox (Personal)/Projects/gMUX
+     Bypass/impl1/gMUXBypass_impl1_synplify.lpf -lpf D:/Dropbox
+     (Personal)/Projects/gMUX Bypass/gMUXBypass.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFXP2-5ECSBGA132
+Target Performance:   5
+Mapper:  mg5a00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  06/15/20  12:40:18
+
+Design Summary
+--------------
+
+   Number of registers:      0 out of  3822 (0%)
+      PFU registers:            0 out of  3564 (0%)
+      PIO registers:            0 out of   258 (0%)
+   Number of SLICEs:         1 out of  2376 (0%)
+      SLICEs as Logic/ROM:      1 out of  2376 (0%)
+      SLICEs as RAM:            0 out of   405 (0%)
+      SLICEs as Carry:          0 out of  2376 (0%)
+   Number of LUT4s:          1 out of  4752 (0%)
+      Number used as logic LUTs:          1
+      Number used as distributed RAM:     0
+      Number used as ripple logic:        0
+      Number used as shift registers:     0
+   Number of PIO sites used: 42 out of 86 (49%)
+      Number of PIO sites used for single ended IOs: 12
+      Number of PIO sites used for differential IOs: 30 (represented by 15 PIO
+     comps in NCD)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 9 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+
+                                    Page 1
+
+
+
+
+Design:  gMUXBypass                                    Date:  06/15/20  12:40:18
+
+Design Summary (cont)
+---------------------
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 24 (0 %)
+   Number of clocks:  0
+   Number of Clock Enables:  0
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net LVDS_IG_A_CLK_c: 2 loads
+     Net LVDS_IG_A_DATA_c[0]: 1 loads
+     Net LVDS_IG_A_DATA_c[1]: 1 loads
+     Net LVDS_IG_A_DATA_c[2]: 1 loads
+     Net LVDS_IG_BKL_ON_c: 1 loads
+     Net LVDS_IG_B_DATA_c[0]: 1 loads
+     Net LVDS_IG_B_DATA_c[1]: 1 loads
+     Net LVDS_IG_B_DATA_c[2]: 1 loads
+     Net LVDS_IG_PANEL_PWR_c: 1 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_A_DATA[0]      | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_A_DATA[0]   | INPUT     | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_DDC_SEL_EG     | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_DDC_SEL_IG     | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| EG_RESET_L          | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| GPUVCORE_EN         | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| P1V0GPU_EN          | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| P1V5FB1V8GPU_R_EN   | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| P3V3GPU_EN          | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| LCD_BKLT_PWM        | OUTPUT    | LVCMOS33  |            |            |
+
+                                    Page 2
+
+
+
+
+Design:  gMUXBypass                                    Date:  06/15/20  12:40:18
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+------------+
+| LCD_PWR_EN          | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| LCD_BKLT_EN         | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_B_CLK          | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_A_CLK          | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_B_DATA[2]      | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_B_DATA[1]      | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_B_DATA[0]      | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_A_DATA[2]      | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_A_DATA[1]      | OUTPUT    | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_PANEL_PWR   | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_BKL_ON      | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_A_CLK       | INPUT     | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_B_DATA[2]   | INPUT     | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_B_DATA[1]   | INPUT     | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_B_DATA[0]   | INPUT     | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_A_DATA[2]   | INPUT     | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+| LVDS_IG_A_DATA[1]   | INPUT     | SSTL18D_II|            |            |
++---------------------+-----------+-----------+------------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal VCC undriven or does not drive anything - clipped.
+Block VCC was optimized away.
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 58 MB
+        
+
+
+
+
+
+
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

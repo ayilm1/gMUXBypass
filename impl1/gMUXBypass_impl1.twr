@@ -1,0 +1,232 @@
+
+Loading design for application trce from file gmuxbypass_impl1.ncd.
+Design name: gMUXBypass
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     CSBGA132
+Performance: 5
+Loading device for application trce from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
+Mon Jun 15 12:40:27 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o gMUXBypass_impl1.twr -gui gMUXBypass_impl1.ncd gMUXBypass_impl1.prf 
+Design file:     gmuxbypass_impl1.ncd
+Preference file: gmuxbypass_impl1.prf
+Device,speed:    LFXP2-5E,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: Default path enumeration
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    4.834ns delay LVDS_IG_A_CLK to LVDS_A_CLK
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         H1.PAD to       H1.PADDI LVDS_IG_A_CLK
+ROUTE         2     2.691       H1.PADDI to       A6.PADDO LVDS_IG_A_CLK_c
+DOPAD_DEL   ---     1.452       A6.PADDO to         A6.PAD LVDS_A_CLK
+                  --------
+                    4.834   (44.3% logic, 55.7% route), 2 logic levels.
+
+Report:    4.801ns delay LVDS_IG_BKL_ON to LCD_BKLT_EN
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.858        N14.PAD to      N14.PADDI LVDS_IG_BKL_ON
+ROUTE         1     2.736      N14.PADDI to       P2.PADDO LVDS_IG_BKL_ON_c
+DOPAD_DEL   ---     1.207       P2.PADDO to         P2.PAD LCD_BKLT_EN
+                  --------
+                    4.801   (43.0% logic, 57.0% route), 2 logic levels.
+
+Report:    4.611ns delay LVDS_IG_PANEL_PWR to LCD_PWR_EN
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.858        L14.PAD to      L14.PADDI LVDS_IG_PANEL_PWR
+ROUTE         1     2.546      L14.PADDI to       N8.PADDO LVDS_IG_PANEL_PWR_c
+DOPAD_DEL   ---     1.207       N8.PADDO to         N8.PAD LCD_PWR_EN
+                  --------
+                    4.611   (44.8% logic, 55.2% route), 2 logic levels.
+
+Report:    4.560ns delay LVDS_IG_B_DATA[1] to LVDS_B_DATA[1]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         H2.PAD to       H2.PADDI LVDS_IG_B_DATA[1]
+ROUTE         1     2.417       H2.PADDI to       A1.PADDO LVDS_IG_B_DATA_c[1]
+DOPAD_DEL   ---     1.452       A1.PADDO to         A1.PAD LVDS_B_DATA[1]
+                  --------
+                    4.560   (47.0% logic, 53.0% route), 2 logic levels.
+
+Report:    4.546ns delay LVDS_IG_A_CLK to LVDS_B_CLK
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         H1.PAD to       H1.PADDI LVDS_IG_A_CLK
+ROUTE         2     2.403       H1.PADDI to       C8.PADDO LVDS_IG_A_CLK_c
+DOPAD_DEL   ---     1.452       C8.PADDO to         C8.PAD LVDS_B_CLK
+                  --------
+                    4.546   (47.1% logic, 52.9% route), 2 logic levels.
+
+Report:    4.538ns delay LVDS_IG_A_DATA[1] to LVDS_A_DATA[1]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         D2.PAD to       D2.PADDI LVDS_IG_A_DATA[1]
+ROUTE         1     2.395       D2.PADDI to       A9.PADDO LVDS_IG_A_DATA_c[1]
+DOPAD_DEL   ---     1.452       A9.PADDO to         A9.PAD LVDS_A_DATA[1]
+                  --------
+                    4.538   (47.2% logic, 52.8% route), 2 logic levels.
+
+Report:    4.538ns delay LVDS_IG_A_DATA[2] to LVDS_A_DATA[2]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         F1.PAD to       F1.PADDI LVDS_IG_A_DATA[2]
+ROUTE         1     2.395       F1.PADDI to      B10.PADDO LVDS_IG_A_DATA_c[2]
+DOPAD_DEL   ---     1.452      B10.PADDO to        B10.PAD LVDS_A_DATA[2]
+                  --------
+                    4.538   (47.2% logic, 52.8% route), 2 logic levels.
+
+Report:    4.286ns delay LVDS_IG_A_DATA[0] to LVDS_A_DATA[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         D1.PAD to       D1.PADDI LVDS_IG_A_DATA[0]
+ROUTE         1     2.143       D1.PADDI to       A8.PADDO LVDS_IG_A_DATA_c[0]
+DOPAD_DEL   ---     1.452       A8.PADDO to         A8.PAD LVDS_A_DATA[0]
+                  --------
+                    4.286   (50.0% logic, 50.0% route), 2 logic levels.
+
+Report:    3.931ns delay LVDS_IG_B_DATA[0] to LVDS_B_DATA[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         F3.PAD to       F3.PADDI LVDS_IG_B_DATA[0]
+ROUTE         1     1.788       F3.PADDI to       A2.PADDO LVDS_IG_B_DATA_c[0]
+DOPAD_DEL   ---     1.452       A2.PADDO to         A2.PAD LVDS_B_DATA[0]
+                  --------
+                    3.931   (54.5% logic, 45.5% route), 2 logic levels.
+
+Report:    3.598ns delay LVDS_IG_B_DATA[2] to LVDS_B_DATA[2]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.691         B1.PAD to       B1.PADDI LVDS_IG_B_DATA[2]
+ROUTE         1     1.455       B1.PADDI to       C5.PADDO LVDS_IG_B_DATA_c[2]
+DOPAD_DEL   ---     1.452       C5.PADDO to         C5.PAD LVDS_B_DATA[2]
+                  --------
+                    3.598   (59.6% logic, 40.4% route), 2 logic levels.
+
+Report:    4.834ns is the maximum delay for this preference.
+
+
+================================================================================
+Preference: Default net enumeration
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    2.736ns maximum delay on LVDS_IG_BKL_ON_c
+
+           Delays             Connection(s)
+           2.736ns        N14.PADDI to P2.PADDO        
+
+Report:    2.691ns maximum delay on LVDS_IG_A_CLK_c
+
+           Delays             Connection(s)
+           2.691ns         H1.PADDI to A6.PADDO        
+           2.403ns         H1.PADDI to C8.PADDO        
+
+Report:    2.546ns maximum delay on LVDS_IG_PANEL_PWR_c
+
+           Delays             Connection(s)
+           2.546ns        L14.PADDI to N8.PADDO        
+
+Report:    2.417ns maximum delay on LVDS_IG_B_DATA_c[1]
+
+           Delays             Connection(s)
+           2.417ns         H2.PADDI to A1.PADDO        
+
+Report:    2.395ns maximum delay on LVDS_IG_A_DATA_c[1]
+
+           Delays             Connection(s)
+           2.395ns         D2.PADDI to A9.PADDO        
+
+Report:    2.395ns maximum delay on LVDS_IG_A_DATA_c[2]
+
+           Delays             Connection(s)
+           2.395ns         F1.PADDI to B10.PADDO       
+
+Report:    2.143ns maximum delay on LVDS_IG_A_DATA_c[0]
+
+           Delays             Connection(s)
+           2.143ns         D1.PADDI to A8.PADDO        
+
+Report:    1.788ns maximum delay on LVDS_IG_B_DATA_c[0]
+
+           Delays             Connection(s)
+           1.788ns         F3.PADDI to A2.PADDO        
+
+Report:    1.627ns maximum delay on GND
+
+           Delays             Connection(s)
+           1.627ns       R25C17D.F0 to M5.PADDO        
+           1.291ns       R25C17D.F0 to P7.PADDO        
+           0.698ns       R25C17D.F0 to M6.PADDO        
+           0.986ns       R25C17D.F0 to P6.PADDO        
+           1.627ns       R25C17D.F0 to P5.PADDO        
+           1.313ns       R25C17D.F0 to P4.PADDO        
+
+Report:    1.455ns maximum delay on LVDS_IG_B_DATA_c[2]
+
+           Delays             Connection(s)
+           1.455ns         B1.PADDI to C5.PADDO        
+
+Report:    2.736ns is the maximum delay for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+Default path enumeration                |     0.000 ns|     4.834 ns|   0  
+                                        |             |             |
+Default net enumeration                 |     0.000 ns|     2.736 ns|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 0 clocks:
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 10 paths, 10 nets, and 16 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+
