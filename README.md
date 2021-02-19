@@ -20,27 +20,51 @@ Due to the loss of the post on advancedreworks, I have put all the critical info
 
 The location of the PCH interposer via we're interested in is as follows:
 
-![](https://i.imgur.com/KAq5CQj.jpg)
+![](docs/pic1.jpg)
 
 Once you have located this point, mark it with a small nick in the solder mask. Proceed to then scratch at the mask layer until you hit the first ground plane layer.
 
-![](https://i.imgur.com/BsqFgd3.jpg)
+![](docs/pic2.jpg)
 
 Cut through this with your pick and continue through the dielectric below. You should see feint evidence of the top of the via. Continue removing dielectric material until you reach the shiny copper top.
 
-![](https://i.imgur.com/Cy9zhGx.jpg)
+![](docs/pic3.jpg)
 
 How you choose to connect to this via is up to you at this point. I used some copper tape mounted to the interposer, and one strand of a scrap piece of stranded wire. The copper tape gives strain relief through mechanical isolation. Images below to serve as an example.
 
-![](https://i.imgur.com/EXfDMqz.jpg)
+![](docs/pic4.jpg)
 
-![](https://i.imgur.com/kMBgHvU.jpg)
+![](docs/pic5.jpg)
 
-![](https://i.imgur.com/sYzBekX.jpg)
+![](docs/pic6.jpg)
 
-![](https://i.imgur.com/qrKkgje.jpg)
+![](docs/pic7.jpg)
 
 I ran the connection to pin 1 of R9693 (LCD_BKLT_PWM) on my implementaion. However after updating my version of OBV, I noticed there appears to be a test point on the PCH side just below C9623 that may also be used. This should save from having to run the wire to the other side of the board.
+
+![](docs/altPoint.jpg)
+
+## Troubleshooting
+
+Some users have reported that they can't access the FPGA on JTAG bus even when they were sure that the connections are correct. This may be caused by some on-board interference.
+Luckily, there are two known methods that can help you gain access:
+
+### Ground the R2881's pin 1 to reset the PCH (Easier method, minimal external tools needed)
+
+![](docs/resetResistor.jpg)
+
+The closest point to ground is the screw hole next to keyboard connector
+
+![](docs/resistorBridge.jpeg)
+
+After you bridge the resistor's pin to ground and plug in the charge adapter, fans should ramp up to max speed to indicate successful PCH shutdown. Method has been tested only with no battery connected.
+
+### Desolder L2406 (Hot air station needed)
+
+![](docs/coilLocation.jpg)
+
+Make sure to solder it back after flashing.
+Desoldering without hot air station is not recommended.
 
 ## Disclaimer
 I am not responsible for any damage this causes. This has been tested on an 820-2915 successfully, but YMMV. The FPGA's original configuration cannot be backed up. This means this process is irreversable and once reprogrammed, the original configuration programmed by Apple will be irrecoverably lost.
